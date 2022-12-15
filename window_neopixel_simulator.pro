@@ -6,21 +6,19 @@ CONFIG -= qt
 TARGET = "window_neopixel_simulator"
 
 SOURCES += \
-        SDL2_gfxPrimitives.c \
-        SDL2_rotozoom.c \
         cometrain.cpp \
         fire.cpp \
         main.cpp \
-        # pictureshow.cpp \
+        pictureshow.cpp \
         pixeltest.cpp \
-        plasma.cpp \
-        effect_kordesii.cpp
-LIBS += -lSDL2 -lSDL2main #-lpng
+	plasma.cpp \
+	game_of_life.cpp
+LIBS += -lSDL2 -lSDL2main -lSDL2_gfx -lpng
 
 HEADERS += \
 	cometrain.h \
 	fire.h \
-        # pictureshow.h \
+	pictureshow.h \
 	pixeltest.h \
-        plasma.h \
-        effect_kordesii.h
+	plasma.h \
+	game_of_life.h
